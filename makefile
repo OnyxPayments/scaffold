@@ -9,8 +9,8 @@ format:
 	.venv/bin/black .
 
 lint:
-	.venv/bin/flake8 .
-	.venv/bin/pylint .
+	.venv/bin/black --check app tests
+	.venv/bin/flake8 app tests
 
 test:
 	.venv/bin/pytest -vv
